@@ -1,94 +1,41 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-   <meta charset="utf-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Rocket Launch</title>
-   <link rel="stylesheet" media="screen and (min-device-width: 640px)" href="script.css" />
-</head>
+  <head>
 
-<body>
-   <header>
-      <h1><img src="wses.png" width="320" height="142" title="" alt="Whole Spectrum Energy Solutions" /></h1>
-   </header>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="rocket.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-   <div class="installed">
-      <p>over <span>583,927</span> watts installed</p>
-   </div>
 
-   <nav>
-      <ul>
-         <li><a href="#">Placement</a></li>
-         <li class="currentPage"><a href="#">Power</a></li>
-         <li><a href="#">Price</a></li>
-     </ul>
-   </nav>
+    <title>Rocket Launches!</title>
+  </head>
+  <body>
+      <div id="Main">
+    <h1>Rocket Launch Schedule!</h1>
+      </div>
+      <div id="button">
+          <fieldset>
+                <p>Upcoming Launches</p>
+                <button type="button" onclick="alert('Next Five Falcon Launches')">Next Five Falcon Launches</button>
+                <button type="button" onclick="alert('Next Five Falcon Launches')">Next Five Launcherone Launches</button>
+                <button type="button" onclick="alert('Next Five Falcon Launches')">Next Five Falcon Ariane</button>
+                <button type="button" onclick="alert('Next Five Falcon Launches')">Next Five Default Launches</button>
+          </fieldset>
+      </div>
+    <div id="countdownSection">
+        
+        <h3>Countdown until Next Launch: 200 min</h3>
+        <img src="rocket.gif" id="ff7" alt="Captain Cid">
+    </div>
+<br>
+<br>
+<br>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="rocket.js"></script>
+    </body>
+    <footer>Rocket Launch - Tucson, AZ</p></footer>
 
-   <article>
-      <h2>Launch Schedule</h2>
-      <section class="Launches">
-         <ul>
-            <li>Launch 1</li>
-            <li>Launch 2</li>
-            <li>Launch 3</li>
-            <li>Launch 4</li>
-            <li>Launch 5</li>
-         </ul>
-      </section>
-      <section class="week">
-         <div class="container">
-            <p class="error"></p>
-            <table>
-               <caption></caption>
-               <thead>
-                  <tr>
-                     <th>Day of week</th>
-                     <th>Power icon</th>
-                     <th>Power percentage value</th>
-                  </tr>
-               </thead>
-               <tbody>
-                  <tr>
-                     <td></td>
-                     <td>&#9728;</td>
-                     <td></td>
-                  </tr>
-                  <tr>
-                     <td></td>
-                     <td>&#9728;</td>
-                     <td></td>
-                  </tr>
-                  <tr>
-                     <td></td>
-                     <td>&#9728;</td>
-                     <td></td>
-                  </tr>
-                  <tr>
-                     <td></td>
-                     <td>&#9728;</td>
-                     <td></td>
-                  </tr>
-                  <tr>
-                     <td></td>
-                     <td>&#9728;</td>
-                     <td></td>
-                  </tr>
-                  <tr>
-                     <td></td>
-                     <td>&#9728;</td>
-                     <td></td>
-                  </tr>
-                  <tr>
-                     <td></td>
-                     <td>&#9728;</td>
-                     <td></td>
-                  </tr>
-               </tbody>
-            </table>
-         </div>
-      </section>
-   </article>
-   <footer><p>Rocket Launches<span>&bull;</span> Tucson, AZ</p></footer>
-   <script src="rocket.js"></script>
-</body>
-</html>
+</html> 

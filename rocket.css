@@ -1,0 +1,57 @@
+body 
+{
+text-align: center;
+right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-image: linear-gradient(to top, #2d3436, #375359, #3c757d, #3e99a1, #3cbec4);
+  background-repeat: no-repeat;
+}
+
+#countdownSection
+{
+    text-align: right;
+}
+
+footer
+{
+position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  text-align: center;
+  background-image: linear-gradient(to top, #2d3436, #375359, #3c757d, #3e99a1, #3cbec4);
+
+}
+
+div > #ff7 {
+    width: 250px;
+    height: 250px;
+
+}
+
+h1
+{
+text-align: center;
+}
+
+#button {
+  text-align: center;
+  background-color: cadetblue ; /* Teal background */
+  color: white; /* White text */
+  cursor: pointer; /* Pointer/hand icon */
+  width: 26%; /* Set a width if needed */
+  display: block; /* Make the buttons appear below each other */
+}
+
+#button:not(:last-child) {
+  border-bottom: none; /* Prevent double borders */
+}
+
+/* Add a background color on hover */
+#button:hover {
+  background-color: teal;
+}
+
