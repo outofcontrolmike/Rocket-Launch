@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
 
@@ -11,16 +11,18 @@
     <title>Rocket Launches!</title>
   </head>
   <body>
-      <div id="Main">
-    <h1>Rocket Launch Schedule!</h1>
+      <div id="title">
+    <h1>Rocket Launch Schedule</h1>
       </div>
-      <div id="button">
+      <div id="nextFive">
+          <h3>Upcoming Launches</h3>
+      </div>
+      <div id="buttons">
           <fieldset>
-                <p>Upcoming Launches</p>
-                <button type="button" onclick="alert('Next Five Falcon Launches')">Next Five Falcon Launches</button>
-                <button type="button" onclick="alert('Next Five Falcon Launches')">Next Five Launcherone Launches</button>
-                <button type="button" onclick="alert('Next Five Falcon Launches')">Next Five Falcon Ariane</button>
-                <button type="button" onclick="alert('Next Five Falcon Launches')">Next Five Default Launches</button>
+                <button type="button" id="falcon" onclick="alert('Next Five Falcon Launches')">Next Five Falcon Launches</button>
+                <button type="button" id="launcherone" onclick="alert('Next Five Falcon Launches')">Next Five Launcherone Launches</button>
+                <button type="button" id="ariane" onclick="alert('Next Five Falcon Launches')">Next Five ariane</button>
+                <button type="button" id="nextFive" onclick="alert('Next Five Falcon Launches')">Next Five Default Launches</button>
           </fieldset>
       </div>
     <div id="countdownSection">
@@ -36,6 +38,6 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
     <script src="rocket.js"></script>
     </body>
-    <footer>Rocket Launch - Tucson, AZ</p></footer>
+    <footer><p><strong>Rocket Town, Final Fantasy 7</strong></p></footer>
 
 </html> 
