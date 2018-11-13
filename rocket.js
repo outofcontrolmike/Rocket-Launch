@@ -2,31 +2,28 @@
 var httpRequest = new XMLHttpRequest;       
 
 //Getting next 5 launches
-httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5");          
-httpRequest.send(null);
-
-
-
+httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?next=5");          
+httpRequest.send();
 
 
 
 // buttons that display;
 
 // Next 5 falcon
-httpRequest.open("get", " https://launchlibrary.net/1.4/launch?name=falcon");
+httpRequest.open("GET", " https://launchlibrary.net/1.4/launch?name=falcon&next=5");
 httpRequest.send();
 
 
-// Next 5 Launcherone
-httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=launcherone");
+// Next 5 launcherone
+httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
 httpRequest.send();
 
 //Next 5 ariane
-httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=ariane");
+httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=arianenext=5");
 httpRequest.send();
 
 // Next 5 default
-httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=default");
+httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=default");
 httpRequest.send();
 
 
@@ -78,7 +75,7 @@ function countDown()
 
     if((dateTo - dateFrom) < 1000)
     {
-        clearInterval(countdown);
+        clearInterval(countDown);
         document.getElementById("countdownSection").style.display = "none";
     }
 }
