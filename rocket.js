@@ -1,5 +1,24 @@
 //
-var httpRequest = new XMLHttpRequest;       
+var httpRequest = new XMLHttpRequest;      
+
+let falconRequest = document.getElementById("falcon");
+let launcheroneRequest = document.getElementById("launcherone");
+let arianeRequest = document.getElementById("ariane");
+let defaultRequest = document.getElementById("nextFive");
+
+falconRequest.addEventListener("click",loadLaunches );
+launcheroneRequest.addEventListener("click", loadLaunches );
+arianeRequest.addEventListener("click", loadLaunches);
+defaultRequest.addEventListener("click", loadLaunches);
+
+ function loadLaunches()
+ {
+
+ }
+
+
+
+
 
 //Getting next 5 launches
 httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?next=5");          
@@ -10,7 +29,7 @@ httpRequest.send();
 // buttons that display;
 
 // Next 5 falcon
-httpRequest.open("GET", " https://launchlibrary.net/1.4/launch?name=falcon&next=5");
+httpRequest.open("GET", " https://launchlibrary.net/1.4/launch?next=5&name=falcon");
 httpRequest.send();
 
 
@@ -23,11 +42,19 @@ httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=arianenext=5"
 httpRequest.send();
 
 // Next 5 default
-httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=default");
+httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?next=5");
 httpRequest.send();
 
 
 
+
+
+
+
+
+
+
+//Countdown Timer
 var countdown;
 
 function countDown()
@@ -77,5 +104,7 @@ function countDown()
     {
         clearInterval(countDown);
         document.getElementById("countdownSection").style.display = "none";
+
+        alert(countDown);
     }
 }
