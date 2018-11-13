@@ -1,55 +1,63 @@
-//
-var httpRequest = new XMLHttpRequest;      
 
-let falconRequest = document.getElementById("falcon");
-let launcheroneRequest = document.getElementById("launcherone");
-let arianeRequest = document.getElementById("ariane");
-let defaultRequest = document.getElementById("nextFive");
+var httpRequest = new XMLHttpRequest(); 
 
-falconRequest.addEventListener("click",loadLaunches );
-launcheroneRequest.addEventListener("click", loadLaunches );
-arianeRequest.addEventListener("click", loadLaunches);
-defaultRequest.addEventListener("click", loadLaunches);
+//function that loads next five launches from API to launches Div on Load Screen 
+let launchDisplay = document.getElementById("launches");
 
- function loadLaunches()
- {
+launchDisplay.addEventListener("load", loadPage)
+
+function loadPage()
+{
+    launchDisplay = httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5");          
+    httpRequest.send();
 
  }
 
 
+// function that swithces to next five from falcon
+let falconRequest = document.getElementById("falcon");
 
+falconRequest.addEventListener("click", loadFalcon)
 
+ function loadFalcon()
+ {
+   var falcon =  httpRequest.open("GET", " https://launchlibrary.net/1.4/launch?next=5&name=falcon");   
+     httpRequest.send();
+     document.getElementById("launches".innerHTML = "falcon");
+    
 
-//Getting next 5 launches
-httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?next=5");          
-httpRequest.send();
+ }
 
+// function that swithces to next launches form launcherone 
+let launcheroneRequest = document.getElementById("launcherone");
 
+launcheroneRequest.addEventListener("click", loadLauncherOne);
 
-// buttons that display;
+function loadLauncherOne() 
+{
+    httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
+    httpRequest.send();
+}
 
-// Next 5 falcon
-httpRequest.open("GET", " https://launchlibrary.net/1.4/launch?next=5&name=falcon");
-httpRequest.send();
+//function that swithces to launches from ariane
+let arianeRequest = document.getElementById("ariane");
+arianeRequest.addEventListener("click", loadAriane);
 
+function loadAriane() 
+{
+    httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=ariane&next=5");
+    httpRequest.send();
+}
 
-// Next 5 launcherone
-httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
-httpRequest.send();
+// function that displays original 5 launches
+let defaultRequest = document.getElementById("nextFive");
+defaultRequest.addEventListener("click", loadLaunches);
 
-//Next 5 ariane
-httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=arianenext=5");
-httpRequest.send();
-
-// Next 5 default
+function loadLaunches()
+{
 httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?next=5");
 httpRequest.send();
-
-
-
-
-
-
+}
 
 
 
@@ -108,3 +116,18 @@ function countDown()
         alert(countDown);
     }
 }
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+

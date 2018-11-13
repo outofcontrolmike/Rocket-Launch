@@ -57,8 +57,3 @@ text-align: center;
   border-bottom: none; /* Prevent double borders */
 }
 
-/* Add a background color on hover */
-#buttons:hover {
-  background-color: teal;
-}
-
