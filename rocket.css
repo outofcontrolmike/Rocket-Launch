@@ -17,7 +17,10 @@ body
 {
     text-align: right;
     position: relative;
-    top: 100px;
+    top:100px;
+    border: 3px;
+    border-style: solid;
+    width: 200px;
 }
 
 footer
@@ -32,9 +35,12 @@ position: absolute;
 
 }
 
-div > #ff7 {
-    width: 400px;
-    height: 350px;
+img {
+    width: 350px;
+    height: 300px;
+    right: 0px;
+    bottom: 200px;
+    position:fixed;
 }
 
 h1
@@ -56,6 +62,7 @@ text-align: center;
 
 #launches
 {
-  bottom: 400px;
+  bottom: 700px;
   position: fixed;
 }
+
