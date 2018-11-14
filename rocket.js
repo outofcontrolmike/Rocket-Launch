@@ -2,19 +2,22 @@
 var httpRequest = new XMLHttpRequest(); 
 var countDown;
 
-
+// variables that will eventually display launch info
 let launchDisplay = document.getElementById("launches");
 let falconRequest = document.getElementById("falcon");
 let launcheroneRequest = document.getElementById("launcherone");
 let arianeRequest = document.getElementById("ariane");
 let defaultRequest = document.getElementById("nextFive");
-let Table = document.getElementById("launchRows");
+
+// created variables to insert launch data into rows
 let row1 = document.getElementById("row1");
 let row2 = document.getElementById("row2");
 let row3 = document.getElementById("row3");
 let row4 = document.getElementById("row4");
 let row5 = document.getElementById("row5");
 
+
+//Events that are supposed to insert the API info into a certain div
 window.addEventListener("load",loadPage)
 launchDisplay.addEventListener("load", loadPage);
 falconRequest.addEventListener("click", loadFalcon);
