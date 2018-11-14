@@ -1,61 +1,65 @@
 
 var httpRequest = new XMLHttpRequest(); 
+var countDown;
+
+
+let launchDisplay = document.getElementById("launches");
+let falconRequest = document.getElementById("falcon");
+let launcheroneRequest = document.getElementById("launcherone");
+let arianeRequest = document.getElementById("ariane");
+let defaultRequest = document.getElementById("nextFive");
+let Table = document.getElementById("launchRows");
+let row1 = document.getElementById("row1");
+let row2 = document.getElementById("row2");
+let row3 = document.getElementById("row3");
+let row4 = document.getElementById("row4");
+let row5 = document.getElementById("row5");
+
+window.addEventListener("load",loadPage)
+launchDisplay.addEventListener("load", loadPage);
+falconRequest.addEventListener("click", loadFalcon);
+launcheroneRequest.addEventListener("click", loadLauncherOne);
+arianeRequest.addEventListener("click", loadAriane);
+defaultRequest.addEventListener("click", loadLaunches);
+
+
+
+
+
 
 //function that loads next five launches from API to launches Div on Load Screen 
-let launchDisplay = document.getElementById("launches");
-
-launchDisplay.addEventListener("load", loadPage)
-
 function loadPage()
 {
-    launchDisplay = httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5");          
-    httpRequest.send();
+    httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5");
+    httpRequest.send(); 
+}
 
- }
-
-
-// function that swithces to next five from falcon
-let falconRequest = document.getElementById("falcon");
-
-falconRequest.addEventListener("click", loadFalcon)
-
+// function that switches to next five from falcon
  function loadFalcon()
  {
-   var falcon =  httpRequest.open("GET", " https://launchlibrary.net/1.4/launch?next=5&name=falcon");   
-     httpRequest.send();
-     document.getElementById("launches".innerHTML = "falcon");
-    
-
+   httpRequest.open("get", " https://launchlibrary.net/1.4/launch?next=5&name=falcon");   
+    httpRequest.send();
+    //document.getElementById("launches".innerHTML="")
  }
 
 // function that swithces to next launches form launcherone 
-let launcheroneRequest = document.getElementById("launcherone");
-
-launcheroneRequest.addEventListener("click", loadLauncherOne);
-
 function loadLauncherOne() 
 {
-    httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
+    httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=launcherone&next=5");
     httpRequest.send();
 }
 
 //function that swithces to launches from ariane
-let arianeRequest = document.getElementById("ariane");
-arianeRequest.addEventListener("click", loadAriane);
-
 function loadAriane() 
 {
-    httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?name=ariane&next=5");
+    httpRequest.open("get", "https://launchlibrary.net/1.4/launch?name=ariane&next=5");
     httpRequest.send();
 }
 
 // function that displays original 5 launches
-let defaultRequest = document.getElementById("nextFive");
-defaultRequest.addEventListener("click", loadLaunches);
-
 function loadLaunches()
 {
-httpRequest.open("GET", "https://launchlibrary.net/1.4/launch?next=5");
+httpRequest.open("get", "https://launchlibrary.net/1.4/launch?next=5");
 httpRequest.send();
 }
 
@@ -63,7 +67,9 @@ httpRequest.send();
 
 
 //Countdown Timer
-var countdown;
+setInterval(countDown);
+
+var dateObject;
 
 function countDown()
 {
@@ -78,7 +84,7 @@ function countDown()
 
     //days
     var daysUntil = Math.floor((dateTo - dateFrom) / 86400000);
-    document.getElementById("countdown").innerHTML = daysUntil;
+    document.getElementById("countdownSection").innerHTML = daysUntil;
 
     //hours
     var fractionalDay = (dateTo - dateFrom) % 86400000;
@@ -87,7 +93,7 @@ function countDown()
         {
             hoursUntil = "0" + hoursUntil;
         } 
-        document.getElementById("countdown").innerHTML += ":" + hoursUntil;
+        document.getElementById("countdownSection").innerHTML += ":" + hoursUntil;
 
     //minutes
     var fractionalHour = fractionalDay % 3600000;
@@ -96,7 +102,7 @@ function countDown()
         {
             minutesUntil = "0" + minutesUntil;
         }
-        document.getElementById("countdown").innerHTML += ":" + minutesUntil;
+        document.getElementById("countdownSection").innerHTML += ":" + minutesUntil;
 
     //Seconds
 
@@ -106,7 +112,7 @@ function countDown()
         {
             secondsUntil = "0" + secondsUntil;
         }
-        document.getElementById("countdown").innerHTML += ":" + secondsUntil;
+        document.getElementById("countdownSection").innerHTML += ":" + secondsUntil;
 
     if((dateTo - dateFrom) < 1000)
     {

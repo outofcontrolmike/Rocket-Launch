@@ -34,9 +34,7 @@ position: absolute;
 
 div > #ff7 {
     width: 400px;
-    height: 300px;
-    text-align: middle;
-
+    height: 350px;
 }
 
 h1
@@ -45,11 +43,10 @@ text-align: center;
 }
 
 #buttons {
-  text-align: center;
-  cursor: pointer; /* Pointer/hand icon */
-  width: 500px; /* Set a width if needed */
-  bottom: 150px;
-  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
 }
 
 
@@ -57,3 +54,8 @@ text-align: center;
   border-bottom: none; /* Prevent double borders */
 }
 
+#launches
+{
+  bottom: 400px;
+  position: fixed;
+}
