@@ -16,7 +16,6 @@ body
 #countdownSection
 {
     text-align: right;
-    position: relative;
     top:100px;
     border: 3px;
     border-style: solid;
