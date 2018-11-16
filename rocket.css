@@ -15,12 +15,11 @@ body
 
 #countdownSection
 {
-    text-align: right;
-    top:100px;
+    text-align: center;
+    top:400px;
     border: 3px;
-    border-style: solid;
-    width: 200px;
-}
+    width: 100%;
+    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);}
 
 footer
 {
@@ -61,7 +60,6 @@ text-align: center;
 
 #launches
 {
-  bottom: 700px;
-  position: fixed;
+position: relative;
 }
 
