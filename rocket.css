@@ -19,7 +19,8 @@ body
     top:400px;
     border: 3px;
     width: 100%;
-    background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);}
+   background-color: #e7e7e7;
+}
 
 footer
 {
@@ -34,16 +35,21 @@ position: absolute;
 }
 
 img {
-    width: 350px;
-    height: 300px;
+    width: 400px;
+    height: 450px;
     right: 0px;
-    bottom: 100px;
-    position:fixed;
+    bottom: 50px;
+    position: fixed;
 }
 
-h1
+h2
 {
 text-align: center;
+}
+
+#myHeading
+{
+  -webkit-text-size-adjust: auto;
 }
 
 #buttons {
@@ -64,3 +70,12 @@ position: relative;
 text-align: center;
 }
 
+.rowContainer
+{
+  display: block;;
+  width: 100%;
+  height: 500px;
+  position: absolute;
+  top:124px;
+  background-color: #e7e7e7;
+}
