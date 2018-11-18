@@ -37,7 +37,7 @@ img {
     width: 350px;
     height: 300px;
     right: 0px;
-    bottom: 200px;
+    bottom: 100px;
     position:fixed;
 }
 
@@ -61,5 +61,6 @@ text-align: center;
 #launches
 {
 position: relative;
+text-align: center;
 }
 
